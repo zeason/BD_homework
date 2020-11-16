@@ -1,0 +1,7 @@
+com.assignment.survey
+com.assignment.survey.bean
+com.assignment.survey.bean.controller
+com.assignment.survey.bean.service
+com.assignment.survey.bean.service.impl
+com.assignment.survey.dao
+com.assignment.survey.dao.impl
