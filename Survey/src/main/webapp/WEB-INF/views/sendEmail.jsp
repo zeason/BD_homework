@@ -29,9 +29,9 @@
 		<div class="container">
 			<h1>Welcome</h1>
 
-			<form class="form" method="GET" onsubmit="return validateForm()" action="./login">
+			<form class="form" method="GET" onsubmit="return validateForm()" action="/survey/sendEmail">
 				<p>URL:<input name="surveyUrl" type="text" value="${url}" readonly></p>
-				<p>Send to:<input name="to" type="text" placeholder="Email">(separated by ;)</p>
+				<p>Send to:<input name="to" type="text" placeholder="Email">(separated by ,)</p>
 				<button type="submit" id="send-button">Send</button>
 			</form>
 		</div>

@@ -31,13 +31,13 @@
 			        <tr>
 			          <th>Id</th>
 			          <th>Title</th>
-			          <th></th>
-			          <th></th>
-			          <th></th>
+			          <th>Edit Survey</th>
+			          <th>Delete Survey</th>
+			          <th>Deliver Survey</th>
 			        </tr>
 			      </thead>
 			    </table>
-			  </div>
+			</div>
 			<table cellpadding="0" cellspacing="1">
 				<c:forEach items="${mycreation}" var="mc">
 				    <tr>
@@ -45,12 +45,22 @@
 				        <td><a class="r-link link text-underlined" href="./survey/${mc.id}">${mc.title}</a></td>
 				        <td><a class="r-link link text-underlined" href="./survey/editSurvey/${mc.id}">Edit</a></td>
 				        <td><a class="r-link link text-underlined" href="./survey/deleteSurvey/${mc.id}">Delete</a></td>
-				        <td><a class="r-link link text-underlined" href="./surveysendEmail/${mc.id}">Email</a></td>
+				        <td><a class="r-link link text-underlined" href="./survey/sendEmail/${mc.id}">Email</a></td>
 				    </tr>
 				</c:forEach>
 			</table>
 		</div>
 		<div id="tabs-2">
+			<div class="tbl-header">
+			    <table cellpadding="0" cellspacing="1" border="0">
+			      <thead>
+			        <tr>
+			          <th>Id</th>
+			          <th>Title</th>
+			        </tr>
+			      </thead>
+			  	</table>
+			</div>
 			<table>
 				<c:forEach items="${answered}" var="as">
 				    <tr>

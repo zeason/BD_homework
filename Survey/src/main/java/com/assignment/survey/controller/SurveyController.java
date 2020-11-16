@@ -245,7 +245,7 @@ public class SurveyController {
 			model.addAttribute("msg", "Not login");
 			return "error";
 		}
-		model.addAttribute("url", request.getLocalAddr()+ "survey/" + id);
+		model.addAttribute("url", "http://" + request.getServerName() + ":" + request.getServerPort() + "/survey/" + id);
 		return "sendEmail";
     }
 }

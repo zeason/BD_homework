@@ -22,11 +22,10 @@ public class EmailServiceImpl implements EmailService {
      * @param to             receiver email address
      */
     @Override
-    public void sendMailSimple(String surveyUrl, String to) throws Exception {
+    public void sendMailSimple(String surveyUrl, String[] to) throws Exception {
 
         try {
             simpleMailMessage.setTo(to);
-            //simpleMailMessage.setSubject("You have a survey");
             simpleMailMessage.setText(String.format("Please click the link to access the suvey:\n %s", surveyUrl));
 
             javaMailSender.send(simpleMailMessage);

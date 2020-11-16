@@ -21,16 +21,15 @@ public class EmailController {
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping("sendEmail")
+	@RequestMapping("/sendEmail")
 	public String sendEmailTask(String surveyUrl, String to, HttpServletRequest request) {
 		try {
-			emailService.sendMailSimple(surveyUrl, to);
+			emailService.sendMailSimple(surveyUrl, to.split(","));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String referer = request.getHeader("Referer");
-	    return "redirect:"+ referer;
+	    return "redirect:/home";
 	}
 
 }
