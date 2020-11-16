@@ -1,11 +1,11 @@
-package com.assignment.survey.bean.service.impl;
+package com.assignment.survey.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.assignment.survey.bean.User;
-import com.assignment.survey.bean.service.UserService;
 import com.assignment.survey.dao.UserDao;
+import com.assignment.survey.service.UserService;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {

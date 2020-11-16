@@ -1,4 +1,4 @@
-package com.assignment.survey.bean.service.impl;
+package com.assignment.survey.service.impl;
 
 import javax.mail.MessagingException;
 
@@ -7,7 +7,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
-import com.assignment.survey.bean.service.EmailService;
+import com.assignment.survey.service.EmailService;
 
 @Service("emailService")
 public class EmailServiceImpl implements EmailService {

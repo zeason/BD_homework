@@ -1,4 +1,4 @@
-package com.assignment.survey.bean.controller;
+package com.assignment.survey.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.assignment.survey.bean.User;
-import com.assignment.survey.bean.service.SurveyService;
-import com.assignment.survey.bean.service.UserService;
+import com.assignment.survey.service.SurveyService;
+import com.assignment.survey.service.UserService;
 
 @Controller
 public class UserController {

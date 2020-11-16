@@ -1,4 +1,4 @@
-package com.assignment.survey.bean.controller;
+package com.assignment.survey.controller;
 
 import java.util.List;
 
@@ -18,9 +18,9 @@ import com.assignment.survey.bean.Option;
 import com.assignment.survey.bean.Question;
 import com.assignment.survey.bean.Survey;
 import com.assignment.survey.bean.User;
-import com.assignment.survey.bean.service.OptionService;
-import com.assignment.survey.bean.service.QuestionService;
-import com.assignment.survey.bean.service.SurveyService;
+import com.assignment.survey.service.OptionService;
+import com.assignment.survey.service.QuestionService;
+import com.assignment.survey.service.SurveyService;
 
 @Controller
 @RequestMapping("/survey")

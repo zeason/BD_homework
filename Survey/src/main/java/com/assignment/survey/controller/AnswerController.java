@@ -1,4 +1,4 @@
-package com.assignment.survey.bean.controller;
+package com.assignment.survey.controller;
 
 import java.io.IOException;
 import java.util.Map;
@@ -18,11 +18,11 @@ import com.assignment.survey.bean.Option;
 import com.assignment.survey.bean.Question;
 import com.assignment.survey.bean.Survey;
 import com.assignment.survey.bean.User;
-import com.assignment.survey.bean.service.AnswerService;
-import com.assignment.survey.bean.service.OptionService;
-import com.assignment.survey.bean.service.QuestionService;
-import com.assignment.survey.bean.service.SurveyService;
-import com.assignment.survey.bean.service.UserService;
+import com.assignment.survey.service.AnswerService;
+import com.assignment.survey.service.OptionService;
+import com.assignment.survey.service.QuestionService;
+import com.assignment.survey.service.SurveyService;
+import com.assignment.survey.service.UserService;
 
 /**
  * Handles requests for the application home page.
@@ -97,13 +97,16 @@ public class AnswerController {
     		user.setName(name);
     		userService.save(user);
     	}
+    	Survey survey = surveyService.get(id);
+    	if (null == survey) {
+    		model.addAttribute("msg", "Survey not exist.");
+    		return "error";
+    	}
     	if (surveyService.getAnswered(user.getId()).stream().anyMatch(s -> s.getId().equals(id))) {
     		return String.format("redirect:/answer/%d", id);  
     	}
-    	Survey survey = surveyService.get(id);
     	survey.setQuestions(questionService.getBySurveyId(id));
-    	@SuppressWarnings("unchecked")
-		Map<String, String> m = request.getParameterMap();
+		Map<String, String[]> m = request.getParameterMap();
     	for (Question q : survey.getQuestions()) {
     		if (m.containsKey(String.valueOf(q.getId()))) {
 	        	Answer answer = new Answer();

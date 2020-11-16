@@ -1,4 +1,4 @@
-package com.assignment.survey.bean.service;
+package com.assignment.survey.service;
 
 import com.assignment.survey.bean.Answer;
 
