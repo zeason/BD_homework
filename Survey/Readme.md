@@ -1,6 +1,6 @@
 # Survey
 
-Framework stack��SpringMVC+Spring+Hibernate+PostgreSQL+SurveyJs+Jquery+Ajax
+Framework stack:SpringMVC+Spring+Hibernate+PostgreSQL+SurveyJs+Jquery+Ajax
 
 * * *
 
